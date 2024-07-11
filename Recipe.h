@@ -9,7 +9,7 @@ using namespace std;
 class Recipe {
 public:
 	Recipe(const string& name, const string& mealType); /* maybe we can use an int for meal type to just have a structure for
-																collecting meal type more modularly later? */ 
+								collecting meal type more modularly later? */ 
 
 	void addIngredient(const string& ingredient);
 	void addStep(const string& step);
