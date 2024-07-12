@@ -1,6 +1,6 @@
 #ifndef RECIPE_H
 #define RECIPE_H
-
+#include <vector>
 #include <string>
 
 using namespace std;

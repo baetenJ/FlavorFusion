@@ -1,3 +1,6 @@
+// add ability to determine the day for each menu listing
+// 
+
 #include <iostream>
 #include <fstream>
 #include <iomanip>
@@ -8,8 +11,8 @@ using namespace std;
 
 int main()
 {
-    int menuSelection = 0;  // Initialize variables
-    int mealSelection = 0;
+    int menuSelection;  // Initialize variables
+    int mealSelection;
 
     cout << "Welcome to FlavorFusion! Your one stop shop for recipe entry" << endl;
 
