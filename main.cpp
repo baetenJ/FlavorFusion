@@ -13,8 +13,11 @@ int main()
 {
     int menuSelection;  // Initialize variables
     int mealSelection;
+    string fileName;
 
+    cout << endl;
     cout << "Welcome to FlavorFusion! Your one stop shop for recipe entry" << endl;
+
 
     while (menuSelection != 3 && mealSelection != 0)  // Use && instead of ||
     {

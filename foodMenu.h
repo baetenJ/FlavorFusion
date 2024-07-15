@@ -15,6 +15,7 @@ public:
 
 	void printMenu() const;
 
+
 private:
 	vector<Recipe> breakfastRecipes;
 	vector<Recipe> lunchRecipes;
