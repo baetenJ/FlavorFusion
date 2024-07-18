@@ -35,7 +35,7 @@ int main()
         cout << "\n1) Add Recipe Entry" << endl;
         cout << "\n2) View your FlavorFusion Menu" << endl;
         cout << "\n3) Export Recipes to file" << endl;
-        cout << "\n4) Exit Program";
+        cout << "\n4) Exit Program" << endl;
         cin >> menuSelection;
 
         cin.ignore(); // line to clear newline from user input
@@ -69,14 +69,14 @@ void enterRecipe(Menu& flavorFusionMenu)
     string step;
     double servingSize;
 
-    cout << "\n Enter the name of the dish for recipe input (or 'done' to exit): " << endl;
+    cout << "Enter the name of the dish for recipe input (or 'done' to exit): " << endl;
     getline(cin, dishTitle);
 
     if (dishTitle == "done") {
         return;
     }
 
-    cout << "Enter the meal type (1 for Breakfast, 2 for Lunch, 3 for Dinner, 4 for Snack OR 'done' to exit): ";
+    cout << "Enter the meal type (1 for Breakfast, 2 for Lunch, 3 for Dinner, 4 for Snack): " << endl;
     cin >> mealType;
 
     Recipe testRecipe(dishTitle, to_string(mealType));
@@ -107,12 +107,12 @@ void enterRecipe(Menu& flavorFusionMenu)
     // set serving size
     cout << "Enter serving size of recipe (how many people): " << endl;
     cin >> servingSize;
-    cin.ignore(); // ignore \n character on input 
+   
     testRecipe.setServingSize(servingSize);
 
     // add recipe to menu (foodMenu.h)
     flavorFusionMenu.addRecipe(testRecipe, mealType);
-    cout << "\nRecipe saved!" << endl;
+    cout << "Recipe saved!" << endl;
 
 }
 
@@ -129,8 +129,6 @@ void exportRecipes(const Menu& flavorFusionMenu) {
 
     // accept input for file name
     cout << "Enter file name you would like to export to: " << endl;
-
-    cin.ignore(); // ignore \n character on input
 
     getline(cin, fileName);
 
